@@ -1,0 +1,13 @@
+N = int(input())
+arr=[]
+for i in range(N):
+  lst = list(map(int, input().split()))
+  if lst[0]==1:
+    arr.append(lst[1])
+  elif lst[0]==2:
+    a=len(arr)//3
+    if len(arr)<3:
+      print("Not enough enemies")
+    else:
+      arr.sort(reverse=True)
+      print(arr[a-1])

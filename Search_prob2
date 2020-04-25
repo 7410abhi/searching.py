@@ -1,0 +1,15 @@
+n = int(input())
+arr = list(map(int, input().split()))
+q = int(input())
+for i in range(q):
+  lst = list(map(int, input().split()))
+  count=0
+  if lst[0]==0:
+    for j in range (len(arr)):
+      if lst[1]<=arr[j]:
+        count=count+1
+  elif lst[0]==1:
+    for k in range(len(arr)):
+      if lst[1]<arr[k]:
+        count=count+1
+  print(count)

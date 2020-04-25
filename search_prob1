@@ -1,0 +1,24 @@
+def search(rem):
+  l = 0
+  r = len(arr)-1
+  while l<=r:
+    mid=(l+r)//2
+    for j in range(k):
+            if arr[mid] == rem[j]:
+              arr.remove(arr[mid])
+            elif arr[mid]>rem[j]:
+              r=mid-1
+            elif arr[mid]<rem[j]:
+              l=mid+1  
+t = int(input())
+for a in range(t):
+  n,k,p=list(map(int, input().split()))
+  arr=[]
+  for i in range(1,n+1):
+    arr.append(i)
+  rem = list(map(int, input().split()))
+  search(rem)
+  if (p-1) <= len(arr):
+    print(arr[p-1])
+  else:
+    print("-1")  
